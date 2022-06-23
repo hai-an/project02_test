@@ -10,12 +10,23 @@
 
 <body>
 
-    <form action="/login" target="_blank" method="post">
+    <form>
         <input type="text" name="email_or_mobile" />
         <input type="password" name="password" />
         <button type="submit">master 提交</button>
     </form>
+    <script>
+        ( function ()
+        {
+            document.querySelector( 'button ' ).addEventListener( 'click', function ( e )
+            {
+                console.log( 'this:', this );
+                e.preventDefault();
+                this.style.backgroundColor = 'gold';
 
+            } )
+        } )
+    </script>
 
 </body>
 
