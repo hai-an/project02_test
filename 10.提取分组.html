@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var str = '<div>我是{{name}}</div>'
+    var pattern = /{{([a-zA-Z]+)}}/
+
+    var result = pattern.exec(str)
+
+    console.log(result)
+  </script>
+  <!-- <script>
+    let Str='<div>我是{{name}}</div>'
+    let reg=/{{([a-zA-Z]+)}}/
+    let res=reg.exec(Str)
+    console.log( res);
+  </script> -->
+</body>
+
+</html>

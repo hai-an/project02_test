@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+        var str = '<div>{{name}}今年{{ age }}岁了</div>'
+        var pattern = /{{\s*([a-zA-Z]+)\s*}}/
+
+        var patternResult = null
+        while ( patternResult = pattern.exec( str ) )
+        {
+            str = str.replace( patternResult[ 0 ], patternResult[ 1 ] )
+        }
+        console.log( str )
+    </script> -->
+    <script>
+        // 定义字符串 和 正则表达式
+        let str= '<div>{{name}}今年{{ age }}岁了</div>'
+        let reg=/{{\s*([a-zA-Z]+)\s*}}/
+
+        // 定义一个替换结果为null
+        let regRes=null
+        // while循环替换
+        while ( regRes = reg.exec( str ) ){
+            str=str.replace(regRes[0],regRes[1])
+        }
+        console.log(str);
+    </script>
+</body>
+
+</html>

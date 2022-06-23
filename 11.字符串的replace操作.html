@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var str = '<div>我是{{name}}</div>'
+        var pattern = /{{([a-zA-Z]+)}}/
+
+        var patternResult = pattern.exec( str )
+        // console.log(patternResult)
+        str = str.replace( patternResult[ 0 ], patternResult[ 1 ] )
+
+        console.log( str )
+    </script>
+    <!-- 练习2 -->
+    <script>
+        let str1 = '<div>我是{{name}}</div>'
+        let reg = /{{([a-zA-Z]+)}}/
+        let regRes = reg.exec( str1 )
+        console.log( regRes );
+        str1 = str1.replace( regRes[ 0 ], regRes[ 1 ] );
+        console.log( str1 );
+    </script>
+</body>
+
+</html>
